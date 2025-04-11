@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label Jelly</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <h1>Label Jelly</h1>
+
+    <div class="controls">
+        <h2>1. Upload Files</h2>
+        <div class="input-group">
+            <label for="excelFileInput">Upload Excel (.xlsx):</label>
+            <input type="file" id="excelFileInput" accept=".xlsx">
+        </div>
+        <div class="input-group">
+            <label for="bgImageInput">Upload Background Image:</label>
+            <input type="file" id="bgImageInput" accept="image/*">
+        </div>
+
+        <h2>2. Select Columns to Display</h2>
+        <div id="columnSelector" class="column-selector">
+            <p><i>Upload Excel file to see columns...</i></p>
+            </div>
+
+        <h2>3. Design Template</h2>
+        <p>Drag elements to position them. Use controls to style.</p>
+        <div class="template-section">
+            <div id="templateEditor" class="label-preview">
+                <p class="template-instruction"><i>Upload background and select columns...</i></p>
+            </div>
+            <div id="styleControls" class="style-controls">
+                <h3>Style Options</h3>
+                <p><i>Select columns to see style options...</i></p>
+            </div>
+        </div>
+
+
+        <h2>4. Generate</h2>
+        <button id="generateButton">Generate Print Preview</button>
+        <p><i>(Ensure pop-ups are allowed for print preview)</i></p>
+
+    </div>
+
+    <div id="outputArea" class="print-output">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
