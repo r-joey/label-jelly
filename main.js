@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (excelData.length > 0) {
                         headers = excelData[0]; // First row is headers
-                        excelData = XLSX.utils.sheet_to_json(worksheet); // Convert again, using headers now
+                        excelData = XLSX.utils.sheet_to_json(worksheet, { raw: false }); // Convert again, using headers now
 
                         console.log("Headers:", headers);
                         console.log("Data:", excelData);
